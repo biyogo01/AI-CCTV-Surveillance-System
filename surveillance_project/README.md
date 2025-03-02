@@ -1,37 +1,59 @@
 # AI CCTV Surveillance System
 
-## Setup Instructions
-1. Ensure all system dependencies are installed
-2. Activate the virtual environment:
-   ```bash
-   source ~/surveillance_env/bin/activate
-   ```
-3. Navigate to the project directory:
-   ```bash
-   cd ~/surveillance_project
-   ```
-4. Start the development server:
-   ```bash
-   python3 manage.py runserver 0.0.0.0:8000
-   ```
-
-## Default Credentials
-- Admin Username: admin
-- Admin Password: adminpass
+This project is a Django-based AI-powered CCTV surveillance system.
 
 ## Features
-- Real-time video monitoring
-- AI-powered threat detection
-- Alert management system
-- Camera management
-- Historical data analysis
+- Real-time video surveillance
+- Motion detection & alerts
+- User authentication & role-based access
+- Web-based control panel
 
-## System Requirements
-- Ubuntu 20.04 or higher
-- Python 3.9
-- MySQL 8.0
-- OpenCV
-- PyTorch
+## Requirements
+- Python 3.x
+- Django
+- OpenCV (if using real-time video processing)
 
-## Support
-For issues and support, please create an issue in the repository.
+## Installation
+
+### 1. Clone the Repository
+```sh
+git clone https://github.com/biyogo01/AI-CCTV-Surveillance-System.git
+cd AI-CCTV-Surveillance-System/surveillance_project
+```
+
+### 2. Create a Virtual Environment
+```sh
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+```sh
+pip install -r requirements.txt
+```
+
+### 4. Run Migrations
+```sh
+python manage.py migrate
+```
+
+### 5. Create a Superuser (Admin Account)
+```sh
+python manage.py createsuperuser
+```
+
+### 6. Run the Development Server
+```sh
+python manage.py runserver
+```
+
+Access the web interface at: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+## Configuration
+- Edit `core/settings.py` for database configuration, security settings, and installed apps.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first.
+
+## License
+This project is licensed under the MIT License.
